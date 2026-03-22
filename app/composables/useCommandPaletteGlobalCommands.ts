@@ -1,3 +1,4 @@
+// @unocss-include
 import type { CommandPaletteCommand } from '~/types/command-palette'
 import {
   DISCORD_BUILDERS_URL,

@@ -21,39 +21,7 @@ const customIcons = {
     '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="6" r="1"/><path d="m9 18 3-5 3 5"/><path d="m8 10 8 0"/><path d="M12 10v4"/></svg>',
 }
 
-const commandPaletteIconClasses = [
-  'i-lucide:search',
-  'i-lucide:command',
-  'i-lucide:calendar-days',
-  'i-lucide:house',
-  'i-lucide:git-compare',
-  'i-lucide:settings',
-  'i-lucide:info',
-  'i-lucide:notebook-pen',
-  'i-lucide:shield-check',
-  'i-custom:a11y',
-  'i-lucide:terminal',
-  'i-lucide:at-sign',
-  'i-lucide:file-text',
-  'i-simple-icons:github',
-  'i-simple-icons:bluesky',
-  'i-lucide:message-circle',
-  'i-lucide:monitor',
-  'i-lucide:sun',
-  'i-lucide:moon',
-  'i-lucide:palette',
-  'i-lucide:swatch-book',
-  'i-lucide:boxes',
-  'i-lucide:users',
-  'i-lucide:user',
-  'i-lucide:package',
-  'i-lucide:code',
-  'i-lucide:tag',
-]
-
 export default defineConfig({
-  // XXX(serhalp): Fix this properly before merging PR. Temporary solution.
-  safelist: commandPaletteIconClasses,
   presets: [
     presetWind4(),
     presetIcons({
