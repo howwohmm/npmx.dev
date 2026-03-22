@@ -3,6 +3,7 @@ import type {
   CommandPaletteContextCommandInput,
   CommandPalettePackageContext,
 } from '~/types/command-palette'
+import { downloadPackageTarball } from '~/utils/package-download'
 
 function activeLabel(isCurrentRoute: boolean, label: string) {
   return isCurrentRoute ? label : null
@@ -103,6 +104,28 @@ export function useCommandPalettePackageCommands(
           },
         },
       ]
+
+      if (resolvedContext.tarballUrl) {
+        commands.push({
+          id: 'package-download',
+          group: 'package',
+          label: t('command_palette.package.download'),
+          keywords: [
+            resolvedContext.packageName,
+            t('package.download.button'),
+            t('package.download.tarball'),
+          ],
+          iconClass: 'i-lucide:download',
+          action: () => {
+            void downloadPackageTarball(resolvedContext.packageName, {
+              version: resolvedContext.resolvedVersion!,
+              dist: {
+                tarball: resolvedContext.tarballUrl!,
+              },
+            })
+          },
+        })
+      }
 
       if (
         resolvedContext.latestVersion &&

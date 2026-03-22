@@ -73,4 +73,5 @@ export interface CommandPalettePackageContext {
   resolvedVersion: string | null
   latestVersion: string | null
   versions: string[]
+  tarballUrl?: string | null
 }

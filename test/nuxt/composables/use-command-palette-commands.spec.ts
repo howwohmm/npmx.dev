@@ -150,6 +150,7 @@ describe('useCommandPaletteCommands', () => {
         resolvedVersion: '3.4.0',
         latestVersion: '3.5.0',
         versions: ['3.3.0', '3.5.0', '3.4.0'],
+        tarballUrl: 'https://registry.npmjs.org/vue/-/vue-3.4.0.tgz',
       },
     })
 
@@ -163,6 +164,7 @@ describe('useCommandPaletteCommands', () => {
       'versions',
     ])
     expect(flatCommands.value.find(command => command.id === 'package-diff')).toBeTruthy()
+    expect(flatCommands.value.find(command => command.id === 'package-download')).toBeTruthy()
     expect(flatCommands.value.find(command => command.id === 'package-main')?.to).toBeTruthy()
     expect(groupedCommands.value.at(-1)?.id).toBe('versions')
     expect(groupedCommands.value.at(-1)?.items[0]?.id).toBe('version:3.4.0')

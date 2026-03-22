@@ -146,7 +146,8 @@
       "docs": "Doc",
       "code": "Code",
       "diff": "Diff",
-      "compare": "Comparer ce paquet"
+      "compare": "Comparer ce paquet",
+      "download": "Télécharger le tarball"
     },
     "package_actions": {
       "copy_run": "Copier la commande d'exécution"

@@ -212,6 +212,7 @@ const commandPalettePackageContext = computed(() => {
     resolvedVersion: resolvedVersion.value ?? packageData['dist-tags']?.latest ?? null,
     latestVersion: packageData['dist-tags']?.latest ?? null,
     versions: commandPaletteVersions.value ?? Object.keys(packageData.versions ?? {}),
+    tarballUrl: packageData.requestedVersion?.dist.tarball ?? null,
   }
 })
 

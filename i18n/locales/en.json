@@ -146,7 +146,8 @@
       "docs": "Docs",
       "code": "Code",
       "diff": "Diff",
-      "compare": "Compare this package"
+      "compare": "Compare this package",
+      "download": "Download tarball"
     },
     "package_actions": {
       "copy_run": "Copy run command"

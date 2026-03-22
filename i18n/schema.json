@@ -444,6 +444,9 @@
             },
             "compare": {
               "type": "string"
+            },
+            "download": {
+              "type": "string"
             }
           },
           "additionalProperties": false
